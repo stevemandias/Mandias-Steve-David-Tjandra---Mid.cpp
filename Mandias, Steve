@@ -1,0 +1,45 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+struct Student
+{
+string name;
+string finalLetterGrade;
+};
+
+string StudentRecord::calcFinalLetterGrade(double finalGrade)
+{
+  string grade;
+  if (finalGrade > 90){
+    grade = "A";
+    return grade;
+  } else if (finalGrade >= 85 && finalGrade <= 90){
+    grade = "A-";
+    return grade;
+  } else if (finalGrade >= 82 && finalGrade < 85){
+    grade = "B+";
+    return grade;
+  } else if (finalGrade >= 78 && finalGrade < 82){
+    grade = "B";
+    return grade;
+  } else if (finalGrade >= 75 && finalGrade < 78){
+    grade = "B-";
+    return grade;
+  } else if (finalGrade > 69 && finalGrade < 75){
+    grade = "C+";
+    return grade;
+  } else if (finalGrade > 66 && finalGrade < 70){
+    grade = "C";
+    return grade;
+  } else if (finalGrade > 59 && finalGrade < 67){
+    grade = "C-";
+    return grade;
+  } else if (finalGrade > 39 && finalGrade < 60){
+    grade = "D";
+    return grade;
+  } else {
+    grade = "F";
+    return grade;
+  }
